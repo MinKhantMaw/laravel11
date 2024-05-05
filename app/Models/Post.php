@@ -9,8 +9,10 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected  $guarded = [];
+    // Define which attributes are mass-assignable
+    protected $guarded = [];
 
+    // Define relationships
     public function user()
     {
         return $this->belongsTo(User::class);
